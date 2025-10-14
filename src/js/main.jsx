@@ -15,6 +15,6 @@ import Semaforo from './components/Semaforo';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Home/>
-    {/* <Semaforo/> */}
+   
   </React.StrictMode>,
 )

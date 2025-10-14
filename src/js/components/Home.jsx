@@ -8,11 +8,11 @@ import Semaforo from "./Semaforo.jsx";
 const Home = () => {
 	return (
 		<div className="text-center">
-            
-
-			<h1>Bienvenido</h1>
+            <h1>Bienvenido</h1>
 			<br />
 			<Semaforo/>
+			
+
 		</div>
 	);
 };

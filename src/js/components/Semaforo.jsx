@@ -4,13 +4,13 @@ const Semaforo = () => {
   const [color, setColor] = useState("rojo");
 
   const cambiarColor = () => {
-    if (color === "rojo") setColor("amarillo");
-    else if (color === "amarillo") setColor("verde");
+    if (color === "rojo") setColor("verde");
+    else if (color === "verde") setColor("amarillo");
     else setColor("rojo");
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", cursor: "pointer" }} onClick={cambiarColor}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", cursor: "pointer" }}>
       <div style={{
         width: 60,
         height: 60,
@@ -35,7 +35,7 @@ const Semaforo = () => {
         margin: 8,
         border: "2px solid #222"
       }} />
-      <span style={{marginTop: 10}}>Haz clic para cambiar el color</span>
+      <button onClick={cambiarColor}> Haz clic para cambiar el color </button>
     </div>
   );
 };
