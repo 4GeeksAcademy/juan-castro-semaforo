@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../styles/index.css";
 
 const Semaforo2 = () => {
-    const [color, setColor] = useState("rojo");
+    const [color, setColor] = useState("verde");
 
     const cambiarColor = () => {
         if (color === "rojo") setColor("verde");
@@ -11,21 +11,26 @@ const Semaforo2 = () => {
     };
 
     return (
-        <div className="semaforo-container">
-            <div
-                className={`semaforo-luz${color === "rojo" ? " rojo" : ""}`}
-                onClick={() => setColor("rojo")}
-            ></div>
-            <div
-                className={`semaforo-luz${color === "amarillo" ? " amarillo" : ""}`}
-                onClick={() => setColor("amarillo")}
-            ></div>
-            <div
-                className={`semaforo-luz${color === "verde" ? " verde" : ""}`}
-                onClick={() => setColor("verde")}
-            ></div>
-            <button onClick={cambiarColor}> Haz clic para cambiar el color </button>
+        <div className="semaforo-wrapper-centro">
+
+            <div className="semaforo-container">
+                <div
+                    className={`semaforo-luz${color === "rojo" ? " rojo" : ""}`}
+                    onClick={() => setColor("rojo")}
+                ></div>
+                <div
+                    className={`semaforo-luz${color === "amarillo" ? " amarillo" : ""}`}
+                    onClick={() => setColor("amarillo")}
+                ></div>
+                <div
+                    className={`semaforo-luz${color === "verde" ? " verde" : ""}`}
+                    onClick={() => setColor("verde")}
+                ></div>
+                
+            </div>
+             <button onClick={cambiarColor}> Haz clic para cambiar el color </button>
         </div>
+
     );
 };
 
